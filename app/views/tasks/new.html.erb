@@ -1,0 +1,17 @@
+<div class="row d-flex justify-content-center mt-3">
+  <%= turbo_frame_tag "first_turbo_frame" do %>
+    <div class="col-9 text-start">
+      <h1 class="border-bottom border-black text-center ms-4">Create a new task</h1>
+    </div>
+  <% end %>
+</div>
+
+<!-- I can use @task or Task.new instead of 'new_task' -->
+
+<div class="d-flex justify-content-center">
+  <div class="row w-50 d-flex my-3 py-2">
+    <%= turbo_frame_tag "new_task" do %>
+      <%= render 'form', task: @task %>
+    <% end %>
+  </div>
+</div>

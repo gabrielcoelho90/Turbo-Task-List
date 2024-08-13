@@ -1,0 +1,5 @@
+<%= form_with model: @task do |form| %>
+    <%= form.text_field :description, class:"col-9 text-center p-2" %>
+    <% @task.id.present? ? button_text = "Update" : button_text = "Save task" %>
+    <%= form.submit "#{button_text}", class: "col-2 btn btn-outline-primary ms-4"%>
+<% end %>

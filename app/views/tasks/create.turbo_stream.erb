@@ -1,0 +1,3 @@
+<%# "tasks" is the turbo_frame_tag's id that wraps all my tasks %>
+<%= turbo_stream.prepend "tasks", partial: "tasks/task", locals: { task: @task } %>
+<%= turbo_stream.update Task.new, " " %>
